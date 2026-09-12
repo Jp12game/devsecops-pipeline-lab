@@ -14,6 +14,13 @@ terraform {
 
   } 
 
+  backend "s3" {
+    bucket         = "devsecops-lab-tfstate-2026"
+    key            = "static-site/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
 } 
 
   
