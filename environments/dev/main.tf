@@ -50,7 +50,7 @@ locals {
 
 module "site" {
   source          = "../../modules/static-site"
-  bucket_name     = "devsecops-lab-${local.environment_name}-2026"
+  bucket_name     = "devsecops-lab-polanco-${local.environment_name}-2026"
   index_file_path = "${path.module}/../../website/index.html"
   environment     = local.environment_name
   tags            = local.environment_settings[local.environment_name].tags
